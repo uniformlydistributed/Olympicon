@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Coming Soon | Private Preview</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --navy:#0d2644;
+    --gold:#d4b16a;
+    --gold-light:#efd7a5;
+}
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    min-height:100vh;
+
+    background:
+    radial-gradient(circle at top,#18375d,#08111d);
+
+    font-family:Inter,sans-serif;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:30px;
+}
+
+.container{
+    width:min(1100px,95vw);
+}
+
+.banner{
+
+    width:100%;
+    display:block;
+
+    border-radius:18px 18px 0 0;
+
+    box-shadow:
+    0 30px 60px rgba(0,0,0,.45);
+}
+
+.panel{
+
+    background:#091728;
+
+    color:white;
+
+    padding:40px;
+
+    border-left:3px solid var(--gold);
+    border-right:3px solid var(--gold);
+    border-bottom:3px solid var(--gold);
+
+    border-radius:0 0 18px 18px;
+
+    text-align:center;
+}
+
+.label{
+
+    color:var(--gold-light);
+
+    text-transform:uppercase;
+
+    letter-spacing:.25em;
+
+    font-size:.85rem;
+
+    margin-bottom:12px;
+}
+
+h1{
+
+    font-family:Cinzel
+    margin:0 0 15px 0;
+}
+
+.description{
+
+    max-width:650px;
+
+    margin:0 auto 30px;
+
+    color:#d7dce5;
+
+    line-height:1.7;
+}
+
+.input-wrap{
+
+    max-width:420px;
+
+    margin:auto;
+}
+
+input{
+
+    width:100%;
+
+    padding:16px;
+
+    border-radius:10px;
+
+    border:1px solid rgba(255,255,255,.15);
+
+    background:#14263d;
+
+    color:white;
+
+    font-size:1rem;
+
+    margin-bottom:12px;
+}
+
+button{
+
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:var(--gold);
+
+    color:#0d2644;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+button:hover{
+    transform:translateY(-2px);
+}
+
+#error{
+
+    color:#ff8f8f;
+
+    min-height:24px;
+
+    margin-top:12px;
+}
+
+.footer{
+
+    margin-top:25px;
+
+    color:#98a6b9;
+
+    font-size:.85rem;
+}
+
+@media(max-width:768px){
+
+    h1{
+        font-size:2rem;
+    }
+
+    .panel{
+        padding:25px;
+    }
+
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+images/coming-soon-banner.jpg
+
+<div class="panel">
+
+<div class="label">
+Private Preview Access
+</div>
+
+<h1>Website Under Development</h1>
+
+<p class="description">
+The Olympicon website is currently available only to invited reviewers while content and event information are being finalised.
+Please enter the preview password below.
+</p>
+
+<div class="input-wrap">
+
+<input
+    id="password"
+    type="password"
+    placeholder="Enter password"
+>
+
+<button onclick="checkPassword()">
+Enter Olympicon
+</button>
+
+<div id="error"></div>
+
+</div>
+
+<div class="footer">
+Olympicon Preview Build
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+const SITE_PASSWORD = "Nat20";
+
+function checkPassword() {
+
+    const password =
+        document.getElementById("password").value;
+
+    if(password === SITE_PASSWORD){
+
+        sessionStorage.setItem(
+            "olympiconAccess",
+            "granted"
+        );
+
+        window.location.href =
+            "site.html";
+
+    } else {
+
+        document.getElementById("error").textContent =
+            "Incorrect password.";
+
+    }
+}
+
+document
+.getElementById("password")
+.addEventListener("keypress", function(event){
+
+    if(event.key === "Enter"){
+        checkPassword();
+    }
+
+});
+
+</script>
+
+</body>
+</html>
