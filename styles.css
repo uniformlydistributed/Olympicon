@@ -171,6 +171,7 @@ color:var(--gold-light);
 .values-strip{
 display:grid;
 grid-template-columns:repeat(4,1fr);
+grid-template-rows: auto;
 background:var(--navy);
 color:white;
 border-top:4px solid var(--gold);
@@ -178,6 +179,7 @@ border-bottom:4px solid var(--gold);
 }
 
 .value-item{
+width: 100%;
 padding:35px;
 text-align:center;
 }
