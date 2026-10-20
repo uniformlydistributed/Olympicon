@@ -63,6 +63,13 @@ color:var(--gold);
 font-size:1.8rem;
 }
 
+.brand-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  display: block;
+}
+
 .main-nav{
 display:flex;
 gap:30px;
