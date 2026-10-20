@@ -333,3 +333,95 @@ h1{
 font-size:3.3rem;
 }
 }
+
+
+/* Keep the five feature icons in one horizontal row at every viewport size. */
+.values-strip {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.value-item {
+  flex: 1 0 0;
+  min-width: 0;
+}
+
+/* Additional community photo placeholders. */
+.community-gallery {
+  width: min(1200px, 90%);
+  margin: auto;
+  padding: 70px 0 90px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.gallery-placeholder {
+  min-width: 0;
+  margin: 0;
+  background: white;
+  border: 2px solid var(--gold);
+  overflow: hidden;
+}
+
+.gallery-placeholder img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: var(--stone);
+}
+
+.gallery-placeholder figcaption {
+  padding: 10px 12px;
+  font-size: .9rem;
+  color: var(--navy);
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .values-strip {
+    grid-template-columns: none;
+  }
+
+  .value-item {
+    flex: 0 0 20%;
+    padding: 18px 6px;
+    font-size: .8rem;
+  }
+
+  .value-icon {
+    font-size: 1.7rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+}
+
+@media (max-width: 420px) {
+  .value-item {
+    flex-basis: 20%;
+    padding: 14px 4px;
+    font-size: .72rem;
+    overflow-wrap: anywhere;
+  }
+
+  .value-icon {
+    font-size: 1.45rem;
+  }
+
+  .gallery-placeholder figcaption {
+    padding: 8px;
+    font-size: .8rem;
+  }
+}
+
