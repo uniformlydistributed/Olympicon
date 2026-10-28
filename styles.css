@@ -134,6 +134,16 @@ font-weight:700;
 margin-bottom:15px;
 }
 
+.hero-date{
+display:inline-block;
+padding:8px 14px;
+background:var(--gold);
+color:var(--navy);
+font-size:clamp(.9rem,1.3vw,1.1rem);
+letter-spacing:.14em;
+margin-bottom:18px;
+}
+
 .dark{
 color:var(--gold);
 }
@@ -262,7 +272,7 @@ padding-left:24px;
 
 .visit-grid{
 display:grid;
-grid-template-columns:repeat(3,1fr);
+grid-template-columns:repeat(2,minmax(0,1fr));
 gap:30px;
 }
 
@@ -272,9 +282,49 @@ padding:30px;
 border:1px solid var(--stone);
 }
 
+.event-item p + p,
+.venue-details p + p{
+margin-top:10px;
+}
+
+.venue-item{
+display:flex;
+align-items:center;
+gap:20px;
+}
+
+.venue-image{
+width:140px;
+height:140px;
+flex-shrink:0;
+object-fit:cover;
+border:1px solid var(--stone);
+}
+
+.venue-details{
+min-width:0;
+}
+
+.venue-details h3{
+margin-bottom:8px;
+}
+
 .visit-symbol{
 font-size:2rem;
 margin-bottom:12px;
+}
+
+.venue-map{
+margin-top:30px;
+border:3px solid var(--gold);
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+.venue-map iframe{
+display:block;
+width:100%;
+height:420px;
+border:0;
 }
 
 .faq-list details{
@@ -351,6 +401,17 @@ justify-content:center;
 }
 }
 
+@media(max-width:600px){
+.venue-item{
+align-items:flex-start;
+flex-direction:column;
+}
+
+.venue-image{
+width:100%;
+height:180px;
+}
+}
 
 /* Greek meander decorative borders */
 
