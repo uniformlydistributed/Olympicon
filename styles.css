@@ -86,8 +86,8 @@ font-size:2rem;
 .hero{
 min-height:80vh;
 display:grid;
-grid-template-columns:minmax(0,1.15fr) minmax(280px,.85fr);
-gap:clamp(32px,5vw,80px);
+grid-template-columns:repeat(2,minmax(0,1fr));
+gap:clamp(20px,2.4vw,36px);
 align-items:center;
 
 background:
@@ -107,8 +107,8 @@ padding:80px 8%;
 grid-column:2;
 grid-row:1;
 width:100%;
-max-width:460px;
-justify-self:end;
+max-width:760px;
+justify-self:center;
 }
 
 .hero-emblem img{
@@ -123,7 +123,7 @@ filter:drop-shadow(0 12px 24px rgba(0,0,0,.3));
 grid-column:1;
 grid-row:1;
 width:100%;
-max-width:700px;
+max-width:760px;
 min-width:0;
 }
 
@@ -150,7 +150,7 @@ color:var(--gold-light);
 
 .hero-copy{
 font-size:1.2rem;
-max-width:600px;
+max-width:760px;
 margin-bottom:35px;
 }
 
@@ -295,7 +295,7 @@ padding:60px 20px;
 border-top:4px solid var(--gold);
 }
 
-@media(max-width:900px){
+@media(max-width:1100px){
 
 .hero{
 grid-template-columns:minmax(0,1fr);
@@ -335,6 +335,19 @@ display:flex;
 
 h1{
 font-size:3.3rem;
+}
+}
+
+@media(min-width:1101px) and (max-width:1280px){
+h1{
+font-size:clamp(4.1rem,6vw,4.5rem);
+}
+}
+
+@media(min-width:1853px){
+.hero{
+grid-template-columns:repeat(2,minmax(0,760px));
+justify-content:center;
 }
 }
 
