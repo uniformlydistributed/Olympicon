@@ -47,6 +47,29 @@ margin:0;
 padding:0;
 }
 
+html, body, body *, body *::before, body *::after{
+transition:background-color .3s ease,color .3s ease,border-color .3s ease,outline-color .3s ease,box-shadow .3s ease,fill .3s ease,stroke .3s ease,text-decoration-color .3s ease;
+}
+
+@media(prefers-reduced-motion:reduce){
+html, body, body *, body *::before, body *::after{
+transition-duration:0s;
+}
+}
+
+::view-transition-old(root),
+::view-transition-new(root){
+animation-duration:.65s;
+animation-timing-function:ease-in-out;
+}
+
+@media(prefers-reduced-motion:reduce){
+::view-transition-old(root),
+::view-transition-new(root){
+animation-duration:0s;
+}
+}
+
 html{
 scroll-behavior:smooth;
 }
@@ -235,15 +258,15 @@ grid-column:2;
 grid-row:1;
 width:100%;
 max-width:760px;
+aspect-ratio:744 / 458;
 justify-self:center;
 }
 
-.hero-emblem img{
-display:block;
-width:100%;
-height:auto;
-object-fit:contain;
+@media(min-width:1101px){
+.hero-emblem{
+background:url("images/olympicon-crest.png") center / contain no-repeat;
 filter:drop-shadow(0 12px 24px rgba(0,0,0,.3));
+}
 }
 
 .hero-content{

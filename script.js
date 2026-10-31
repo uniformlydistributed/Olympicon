@@ -28,7 +28,16 @@ if (themeToggle) {
 
   themeToggle.addEventListener("click", () => {
     const isDark = document.documentElement.dataset.theme !== "dark";
-    setTheme(isDark);
+    const applyTheme = () => setTheme(isDark);
+
+    if (
+      typeof document.startViewTransition === "function" &&
+      !window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    ) {
+      document.startViewTransition(applyTheme);
+    } else {
+      applyTheme();
+    }
 
     try {
       localStorage.setItem("olympicon-theme", isDark ? "dark" : "light");
