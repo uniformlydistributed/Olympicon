@@ -1,4 +1,60 @@
 /* Global design tokens and baseline styles; adjust tokens here to update the shared site palette. */
+@font-face{
+font-family:"Cinzel";
+font-style:normal;
+font-weight:500;
+font-display:swap;
+src:url("fonts/cinzel-latin.woff2") format("woff2");
+}
+
+@font-face{
+font-family:"Cinzel";
+font-style:normal;
+font-weight:600;
+font-display:swap;
+src:url("fonts/cinzel-latin.woff2") format("woff2");
+}
+
+@font-face{
+font-family:"Cinzel";
+font-style:normal;
+font-weight:700;
+font-display:swap;
+src:url("fonts/cinzel-latin.woff2") format("woff2");
+}
+
+@font-face{
+font-family:"Source Sans 3";
+font-style:normal;
+font-weight:300;
+font-display:swap;
+src:url("fonts/source-sans-3-latin.woff2") format("woff2");
+}
+
+@font-face{
+font-family:"Source Sans 3";
+font-style:normal;
+font-weight:400;
+font-display:swap;
+src:url("fonts/source-sans-3-latin.woff2") format("woff2");
+}
+
+@font-face{
+font-family:"Source Sans 3";
+font-style:normal;
+font-weight:600;
+font-display:swap;
+src:url("fonts/source-sans-3-latin.woff2") format("woff2");
+}
+
+@font-face{
+font-family:"Source Sans 3";
+font-style:normal;
+font-weight:700;
+font-display:swap;
+src:url("fonts/source-sans-3-latin.woff2") format("woff2");
+}
+
 :root{
 --navy:#102946;
 --navy-dark:#08192d;
