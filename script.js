@@ -13,12 +13,20 @@ if (themeToggle) {
   };
 
   let savedTheme;
+  let savedThemeAt;
   try {
     savedTheme = localStorage.getItem("olympicon-theme");
+    savedThemeAt = Number(localStorage.getItem("olympicon-theme-updated-at"));
   } catch (error) {
     console.error("Unable to load the saved theme preference.", error);
   }
-  const initialTheme = savedTheme === "dark" || savedTheme === "light"
+  const currentTime = Date.now();
+  const hasRecentSavedTheme =
+    (savedTheme === "dark" || savedTheme === "light") &&
+    Number.isFinite(savedThemeAt) &&
+    savedThemeAt <= currentTime &&
+    currentTime - savedThemeAt < 60 * 60 * 1000;
+  const initialTheme = hasRecentSavedTheme
     ? savedTheme
     : typeof window.matchMedia === "function" &&
       window.matchMedia("(prefers-color-scheme: dark)").matches
@@ -40,6 +48,7 @@ if (themeToggle) {
     }
 
     try {
+      localStorage.setItem("olympicon-theme-updated-at", String(Date.now()));
       localStorage.setItem("olympicon-theme", isDark ? "dark" : "light");
     } catch (error) {
       console.error("Unable to save the theme preference.", error);

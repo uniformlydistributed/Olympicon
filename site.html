@@ -6,12 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>
   let savedTheme;
+  let savedThemeAt;
   try {
     savedTheme = localStorage.getItem("olympicon-theme");
+    savedThemeAt = Number(localStorage.getItem("olympicon-theme-updated-at"));
   } catch (error) {
     console.error("Unable to load the saved theme preference.", error);
   }
-  const initialTheme = savedTheme === "dark" || savedTheme === "light"
+  const currentTime = Date.now();
+  const hasRecentSavedTheme =
+    (savedTheme === "dark" || savedTheme === "light") &&
+    Number.isFinite(savedThemeAt) &&
+    savedThemeAt <= currentTime &&
+    currentTime - savedThemeAt < 60 * 60 * 1000;
+  const initialTheme = hasRecentSavedTheme
     ? savedTheme
     : typeof window.matchMedia === "function" &&
       window.matchMedia("(prefers-color-scheme: dark)").matches
