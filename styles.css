@@ -509,6 +509,23 @@ border:1px solid var(--stone);
 margin-top:10px;
 }
 
+.event-calendar-links{
+display:flex;
+flex-wrap:wrap;
+gap:12px;
+}
+
+.event-item .event-calendar-label{
+margin-top:48px;
+margin-bottom:8px;
+font-weight:700;
+}
+
+.event-calendar-button{
+padding:8px 14px;
+font-size:.9rem;
+}
+
 .venue-item{
 display:flex;
 align-items:center;

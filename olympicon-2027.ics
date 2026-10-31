@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Olympicon//Event Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:olympicon-2027@olympicon.org
+DTSTAMP:20261031T163400Z
+DTSTART:20270123T100000Z
+DTEND:20270124T000000Z
+SUMMARY:Olympicon Liverpool 2027
+LOCATION:Liverpool Olympia\, West Derby Road\, Liverpool L6 9BY
+DESCRIPTION:Liverpool's tabletop gaming convention. Doors open at 10am and the event runs until midnight.
+URL:https://olympicon.org/site.html
+END:VEVENT
+END:VCALENDAR
