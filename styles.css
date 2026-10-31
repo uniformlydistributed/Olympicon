@@ -93,6 +93,10 @@ color:var(--navy);
 font-weight:700;
 }
 
+.site-header .main-nav a:not(.button):not(.brand):not(.nav-social-link):not(.nav-ticket):not(.footer-social-link){
+text-decoration:none;
+}
+
 .nav-social-link{
 display:inline-flex;
 align-items:center;
