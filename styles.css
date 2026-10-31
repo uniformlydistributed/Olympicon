@@ -41,7 +41,7 @@ background:var(--parchment);
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 5%;
+padding:5px 5%;
 border-bottom:3px solid var(--gold);
 }
 
@@ -69,6 +69,7 @@ font-size:1.8rem;
 
 .main-nav{
 display:flex;
+align-items:center;
 gap:30px;
 }
 
@@ -78,8 +79,51 @@ color:var(--navy);
 font-weight:700;
 }
 
+.nav-social-link{
+display:inline-flex;
+align-items:center;
+gap:6px;
+}
+
+.nav-social-icon{
+width:16px;
+height:16px;
+fill:currentColor;
+stroke:currentColor;
+stroke-width:2;
+}
+
+.nav-social-icon rect,
+.nav-social-icon circle{
+fill:none;
+}
+
+.nav-social-icon path{
+stroke:none;
+}
+
+.nav-social-icon .nav-social-icon-dot{
+fill:currentColor;
+stroke:none;
+}
+
 .nav-ticket{
-color:var(--gold) !important;
+background:var(--gold);
+color:var(--navy) !important;
+padding:4px 16px;
+border-radius:4px;
+white-space:nowrap;
+transition:background .2s ease,transform .2s ease;
+}
+
+.nav-ticket:hover{
+background:var(--gold-light);
+transform:translateY(-1px);
+}
+
+.nav-ticket:focus-visible{
+outline:3px solid var(--navy);
+outline-offset:3px;
 }
 
 .menu-toggle{
@@ -226,7 +270,7 @@ color:var(--gold-light);
 .faq-section{
 width:min(1200px,90%);
 margin:auto;
-padding:90px 0;
+padding:40px 0;
 }
 
 /* Shared contact-card layout used by both the contact and exhibitor enquiry pages. */
@@ -480,8 +524,73 @@ border-top:4px solid var(--gold);
 }
 
 .footer-social-link{
-margin-top:20px;
+display:inline-flex;
+align-items:center;
+justify-content:center;
+gap:10px;
+margin:0;
 padding:10px 20px;
+background:transparent;
+color:white;
+border:1px solid var(--gold);
+transition:background .2s ease,color .2s ease;
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus-visible{
+background:rgba(212,177,106,.12);
+color:var(--gold-light);
+}
+
+.footer-primary-links{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:14px;
+margin-top:24px;
+}
+
+.footer-social-icon{
+width:20px;
+height:20px;
+fill:currentColor;
+stroke:currentColor;
+stroke-width:2;
+}
+
+.footer-social-icon rect,
+.footer-social-icon circle{
+fill:none;
+}
+
+.footer-social-icon path{
+stroke:none;
+}
+
+.footer-social-icon .footer-social-icon-dot{
+fill:currentColor;
+stroke:none;
+}
+
+.footer-utility-links{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:8px 24px;
+margin-top:20px;
+}
+
+.footer-utility-link{
+color:rgba(255,255,255,.9);
+font-size:1rem;
+font-weight:600;
+text-decoration:underline;
+text-underline-offset:3px;
+}
+
+.footer-utility-link:hover,
+.footer-utility-link:focus-visible{
+color:white;
 }
 
 .footer-cookie-notice{
@@ -521,6 +630,7 @@ left:0;
 right:0;
 background:white;
 flex-direction:column;
+align-items:stretch;
 padding:20px;
 }
 
