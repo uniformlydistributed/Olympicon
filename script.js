@@ -46,3 +46,18 @@ if (menuToggle && mainNav) {
   });
 
 }
+
+const mapContainer = document.querySelector(".venue-map");
+
+if (mapContainer) {
+  const mapButton = mapContainer.querySelector(".map-load-button");
+  const mapFrame = mapContainer.querySelector("iframe");
+  const mapSrc = mapContainer.dataset.mapSrc;
+
+  if (mapButton && mapFrame && mapSrc) {
+    mapButton.addEventListener("click", () => {
+      mapFrame.src = mapSrc;
+      mapContainer.classList.add("is-loaded");
+    });
+  }
+}

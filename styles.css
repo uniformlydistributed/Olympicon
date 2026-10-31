@@ -482,9 +482,11 @@ margin-bottom:12px;
 
 /* Venue map and frequently asked questions. */
 .venue-map{
+position:relative;
 min-width:0;
 border:3px solid var(--gold);
 box-shadow:0 15px 35px rgba(0,0,0,.08);
+background:linear-gradient(135deg,rgba(17,29,57,.96),rgba(40,56,88,.92));
 }
 
 .venue-map iframe{
@@ -493,6 +495,71 @@ width:100%;
 height:100%;
 min-height:300px;
 border:0;
+background:var(--parchment);
+}
+
+.map-load-overlay{
+position:absolute;
+inset:0;
+background:linear-gradient(135deg, rgba(17,29,57,.78), rgba(17,29,57,.92));
+color:white;
+z-index:1;
+transition:opacity .2s ease, visibility .2s ease;
+padding:24px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+gap:28px;
+text-align:center;
+}
+
+.map-load-button{
+padding:10px 18px;
+border:1px solid var(--gold);
+background:rgba(212,177,106,.1);
+color:white;
+font:inherit;
+font-size:.85rem;
+font-weight:700;
+letter-spacing:.08em;
+text-transform:uppercase;
+cursor:pointer;
+}
+
+.map-load-button:hover,
+.map-load-button:focus-visible{
+background:rgba(212,177,106,.24);
+}
+
+.map-load-message{
+max-width:420px;
+margin:0;
+color:rgba(255,255,255,.82);
+font-size:.62rem;
+line-height:1.5;
+letter-spacing:0;
+text-transform:none;
+font-weight:400;
+}
+
+.venue-map .map-load-message a:not(.button):not(.hero-venue-link),
+.venue-map .map-load-message a:not(.button):not(.hero-venue-link):visited{
+color:#f2d48f;
+text-decoration:underline;
+text-decoration-color:#f2d48f;
+text-underline-offset:3px;
+}
+
+.venue-map .map-load-message a:not(.button):not(.hero-venue-link):hover,
+.venue-map .map-load-message a:not(.button):not(.hero-venue-link):focus-visible{
+color:white;
+}
+
+.venue-map.is-loaded .map-load-overlay{
+visibility:hidden;
+opacity:0;
+pointer-events:none;
 }
 
 .visit-contact-box{
