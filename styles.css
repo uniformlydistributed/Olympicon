@@ -26,6 +26,20 @@ font-family:"Source Sans 3",sans-serif;
 line-height:1.6;
 }
 
+a:not(.button):not(.brand):not(.nav-social-link):not(.nav-ticket):not(.footer-social-link){
+text-decoration:underline;
+text-decoration-color:var(--gold-light);
+text-underline-offset:3px;
+}
+
+main a:not(.button):not(.hero-venue-link),
+main a:not(.button):not(.hero-venue-link):visited{
+color:var(--navy);
+font-weight:600;
+text-decoration-color:var(--gold);
+text-decoration-thickness:2px;
+}
+
 h1,h2,h3,
 .brand{
 font-family:"Cinzel",serif;
@@ -599,8 +613,13 @@ margin:24px 0 0;
 }
 
 .footer-cookie-notice a{
-color:var(--gold-light);
+color:white;
+text-decoration-color:var(--gold-light);
 text-underline-offset:3px;
+}
+
+.footer-cookie-notice a:visited{
+color:white;
 }
 
 .footer-cookie-notice a:hover,
