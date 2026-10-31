@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <!-- Require the preview-page session flag before showing the main site. -->
   <script>
 if (
     sessionStorage.getItem("olympiconAccess")
@@ -9,6 +10,7 @@ if (
     window.location.href = "index.html";
 }
 </script>
+<!-- Page metadata and shared typography/style resources. -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Olympicon - Liverpool's celebration of board games, card games, roleplaying and hobby gaming.">
@@ -25,8 +27,10 @@ if (
 
 <body>
 
+<!-- Decorative divider is hidden from assistive technology. -->
 <div class="greek-border" aria-hidden="true"></div>
   
+<!-- Brand header and section navigation. -->
 <header class="site-header">
 
 <a class="brand" href="#home">
@@ -43,10 +47,11 @@ if (
 </button>
 
 <nav id="main-nav" class="main-nav">
-<a href="#about">About</a>
 <a href="#activities">Activities</a>
 <a href="#visit">Visit</a>
 <a href="#faq">FAQ</a>
+<a href="https://www.facebook.com/LiverpoolOlympicon" target="_blank" rel="noopener noreferrer">Facebook</a>
+<a href="https://www.instagram.com/liverpool.olympicon" target="_blank" rel="noopener noreferrer">Instagram</a>
 <a class="nav-ticket" href="#tickets">Tickets</a>
 </nav>
 
@@ -54,6 +59,7 @@ if (
 
 <main>
 
+<!-- Primary event introduction and calls to action. -->
 <section class="hero" id="home">
 
 <div class="hero-emblem" aria-hidden="true">
@@ -89,12 +95,12 @@ Whether you're a seasoned hobby gamer or completely new to tabletop gaming, Olym
 
 <div>
 <strong>VENUE</strong>
-<span>Liverpool Olympia</span>
+<span><a class="hero-venue-link" href="https://www.liverpoololympia.co.uk/events/olympicon/" target="_blank" rel="noopener noreferrer">Liverpool Olympia</a></span>
 </div>
 
 <div>
 <strong>COMMUNITY</strong>
-<span>Meet Players • Make Friends • Bring and Buy</span>
+<span>Meet Players • Make Friends • Discover Games</span>
 </div>
 
 <div>
@@ -109,25 +115,9 @@ Whether you're a seasoned hobby gamer or completely new to tabletop gaming, Olym
 </section>
 <div class="greek-border" aria-hidden="true"></div>
 
-<section class="intro" id="about">
-
-<div>
-<h2>
-One convention.<br>
-Endless possibilities.
-</h2>
-</div>
-
-<div>
-<p>
-Browse our games library, join demonstrations and explore incredible games throughout the day.
-</p>
-</div>
-
-</section>
-
 <section class="section-divider"></section>
 
+<!-- Featured activities available at the event. -->
 <section class="activities" id="activities">
 
 <div class="section-title">
@@ -200,20 +190,6 @@ Put your board game knowledge to the test in our board game quiz.
 
 <article class="feature-card">
 
-<img src="images/people-playing-04.jpg" alt="People playing a tabletop game">
-
-<div class="card-content">
-<div class="card-label">BRING & BUY</div>
-<h3>Bring and Buy</h3>
-<p>
-Bring your own games to sell, or browse the Bring and Buy to find games looking for a new home.
-</p>
-</div>
-
-</article>
-
-<article class="feature-card">
-
 <img src="images/people-playing-05.jpg" alt="People enjoying a board game">
 
 <div class="card-content">
@@ -231,6 +207,7 @@ Join in the event raffle for a chance to win. Details will be announced closer t
 </section>
 
 
+<!-- Additional ways for visitors to join in and play. -->
 <section class="what-to-expect" id="what-to-expect">
 
 <div class="section-title">
@@ -272,6 +249,7 @@ Join in the event raffle for a chance to win. Details will be announced closer t
 
 </section>
 
+<!-- Ticket information and external booking link. -->
 <section class="tickets-section" id="tickets">
 
 <div class="ticket-copy">
@@ -283,7 +261,7 @@ JOIN THE CONVENTION
 <h2>Tickets</h2>
 
 <p>
-Tickets are available on the main Liverpool Olympia website.
+Tickets are sold through EVENTIM.Light. The link opens their booking page in a new tab.
 </p>
 
 <ul>
@@ -292,14 +270,15 @@ Tickets are available on the main Liverpool Olympia website.
 <li>Buy your tickets now! Limited numbers</li>
 </ul>
 
-<a href="https://www.liverpoololympia.co.uk/" class="button button-gold">
-Find Tickets
+<a href="https://www.eventim-light.com/uk/a/63cad97174fb184f4eebfa20/e/6ae4aea4b75d9bad15a7b012" class="button button-gold" target="_blank" rel="noopener noreferrer">
+Buy Tickets
 </a>
 
 </div>
 
 </section>
 
+<!-- Event logistics, venue information, accessibility, and map. -->
 <section class="visit-section" id="visit">
 
 <div class="section-title">
@@ -343,6 +322,10 @@ West Derby Road, Liverpool L6 9BY.
 </p>
 
 <p>
+<a href="https://www.liverpoololympia.co.uk/events/olympicon/" target="_blank" rel="noopener noreferrer">View the event on Liverpool Olympia's website</a>
+</p>
+
+<p>
 Drinks and snacks will be available to purchase at the venue.
 </p>
 
@@ -360,6 +343,18 @@ Drinks and snacks will be available to purchase at the venue.
 
 <p>
 For accessibility arrangements and visitor information, visit the <a href="https://www.liverpoololympia.co.uk/access-info/">Liverpool Olympia access information page</a>.
+</p>
+
+</div>
+
+<div class="visit-item">
+
+<div class="visit-symbol">🛏️</div>
+<h3>Accommodation</h3>
+
+<p>
+Our local hotel partner, Novotel Paddington Village, offers 20% off accommodation.
+<a href="https://www.liverpoololympia.co.uk/novotel-liverpool-paddington-village/" target="_blank" rel="noopener noreferrer">Click here for more information</a>.
 </p>
 
 </div>
@@ -397,6 +392,7 @@ On-street parking is limited. Please respect local residents and do not park in 
 
 </section>
 
+<!-- Expandable answers to common visitor questions. -->
 <section class="faq-section" id="faq">
 
 <div class="section-title">
@@ -427,13 +423,8 @@ FAQ
 </details>
 
 <details>
-<summary>Can I bring games to sell?</summary>
-<p>Yes. Bring your own games to sell at the Bring and Buy, or browse to find a game to take home. Further details will be announced closer to the event.</p>
-</details>
-
-<details>
 <summary>Where can I get tickets?</summary>
-<p>Tickets are available through the <a href="https://www.liverpoololympia.co.uk/">Liverpool Olympia website</a>. Early Bird and child tickets are available; check the event listing for current prices and availability.</p>
+<p>Tickets are available through the <a href="https://www.eventim-light.com/uk/a/63cad97174fb184f4eebfa20/e/6ae4aea4b75d9bad15a7b012" target="_blank" rel="noopener noreferrer">EVENTIM.Light booking page (opens in a new tab)</a>. Early Bird and child tickets are available; check the event listing for current prices and availability.</p>
 </details>
 
 <details>
@@ -446,6 +437,7 @@ FAQ
 </section>
 
 </main>
+<!-- Page closing ornament and footer. -->
 <div class="greek-border" aria-hidden="true"></div>
 <footer class="site-footer">
 
@@ -454,8 +446,16 @@ FAQ
 <p>
 Meeples • Mingling • Merseyside
 </p>
+
+<a class="button button-gold footer-social-link" href="https://www.facebook.com/LiverpoolOlympicon" target="_blank" rel="noopener noreferrer">
+Follow us on Facebook
+</a>
+<a class="button button-gold footer-social-link" href="https://www.instagram.com/liverpool.olympicon" target="_blank" rel="noopener noreferrer">
+Follow us on Instagram
+</a>
 </footer>
 
+<!-- Mobile navigation behavior. -->
 <script src="script.js"></script>
 
 </body>

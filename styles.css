@@ -1,3 +1,4 @@
+/* Global design tokens and baseline styles. */
 :root{
 --navy:#102946;
 --navy-dark:#08192d;
@@ -30,6 +31,7 @@ h1,h2,h3,
 font-family:"Cinzel",serif;
 }
 
+/* Site header, brand identity, and primary navigation. */
 .site-header{
 background:var(--parchment);
 display:flex;
@@ -83,6 +85,7 @@ border:none;
 font-size:2rem;
 }
 
+/* Hero layout, background, and event introduction. */
 .hero{
 min-height:80vh;
 display:grid;
@@ -198,6 +201,20 @@ display:block;
 color:var(--gold-light);
 }
 
+.hero-venue-link,
+.hero-venue-link:visited{
+color:white;
+text-decoration:underline;
+text-decoration-color:var(--gold-light);
+text-underline-offset:3px;
+}
+
+.hero-venue-link:hover,
+.hero-venue-link:focus-visible{
+color:var(--gold-light);
+}
+
+/* Content sections and activity cards. */
 .intro,
 .activities,
 .what-to-expect,
@@ -314,6 +331,7 @@ font-size:2rem;
 margin-bottom:12px;
 }
 
+/* Venue map and frequently asked questions. */
 .venue-map{
 margin-top:30px;
 border:3px solid var(--gold);
@@ -345,6 +363,12 @@ padding:60px 20px;
 border-top:4px solid var(--gold);
 }
 
+.footer-social-link{
+margin-top:20px;
+padding:10px 20px;
+}
+
+/* Tablet and smaller desktop layouts. */
 @media(max-width:1100px){
 
 .hero{
@@ -388,12 +412,14 @@ font-size:3.3rem;
 }
 }
 
+/* Intermediate desktop heading scale. */
 @media(min-width:1101px) and (max-width:1280px){
 h1{
 font-size:clamp(4.1rem,6vw,4.5rem);
 }
 }
 
+/* Keep the hero columns within a readable width on very large screens. */
 @media(min-width:1853px){
 .hero{
 grid-template-columns:repeat(2,minmax(0,760px));
@@ -401,6 +427,7 @@ justify-content:center;
 }
 }
 
+/* Stack venue details on narrow mobile screens. */
 @media(max-width:600px){
 .venue-item{
 align-items:flex-start;
@@ -413,9 +440,7 @@ height:180px;
 }
 }
 
-/* Greek meander decorative borders */
-
-/* Decorative Greek key border */
+/* Repeating Greek-key ornament used between major page regions. */
 .greek-border {
   height: 14px;
   background-color: var(--navy);

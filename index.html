@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 
+<!-- Document metadata and web fonts for the private-preview page. -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -11,6 +12,7 @@
 
 <style>
 
+/* Shared colors for the preview page. */
 :root{
     --navy:#0d2644;
     --gold:#d4b16a;
@@ -21,6 +23,7 @@
     box-sizing:border-box;
 }
 
+/* Center the preview panel over a full-height background. */
 body{
     margin:0;
     min-height:100vh;
@@ -41,6 +44,7 @@ body{
     width:min(1100px,95vw);
 }
 
+/* Banner artwork and the access panel beneath it. */
 .banner{
 
     width:100%;
@@ -99,6 +103,7 @@ h1{
     line-height:1.7;
 }
 
+/* Password form and its inline feedback message. */
 .input-wrap{
 
     max-width:420px;
@@ -185,6 +190,7 @@ button:hover{
 </head>
 <body>
 
+<!-- Preview content: artwork followed by the access form. -->
 <div class="container">
 
 <img src="images/coming-soon-banner.jpg" width="100%" alt="Coming soon!">
@@ -201,6 +207,7 @@ The Olympicon website is currently under construction
 
 <div class="input-wrap">
 
+<!-- Password input and button both use the checkPassword() handler. -->
 <input
     id="password"
     type="password"
@@ -222,6 +229,7 @@ Roll the Dice
 
 <script>
 
+// This preview-only check unlocks site.html for the current browser tab.
 const SITE_PASSWORD = "Nat20";
 
 function checkPassword() {
@@ -231,6 +239,7 @@ function checkPassword() {
 
     if(password === SITE_PASSWORD){
 
+        // site.html checks this session flag before showing the main site.
         sessionStorage.setItem(
             "olympiconAccess",
             "granted"
@@ -241,12 +250,14 @@ function checkPassword() {
 
     } else {
 
+        // Render feedback as text rather than interpreting it as markup.
         document.getElementById("error").textContent =
             "Incorrect password.";
 
     }
 }
 
+// Allow visitors to submit the password from the keyboard.
 document
 .getElementById("password")
 .addEventListener("keypress", function(event){
