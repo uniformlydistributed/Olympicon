@@ -5,12 +5,20 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script>
+let savedTheme;
 try {
-  if (localStorage.getItem("olympicon-theme") === "dark") {
-    document.documentElement.dataset.theme = "dark";
-  }
+  savedTheme = localStorage.getItem("olympicon-theme");
 } catch (error) {
   console.error("Unable to load the saved theme preference.", error);
+}
+const initialTheme = savedTheme === "dark" || savedTheme === "light"
+  ? savedTheme
+  : typeof window.matchMedia === "function" &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+if (initialTheme === "dark") {
+  document.documentElement.dataset.theme = "dark";
 }
 </script>
 <meta name="description" content="How Olympicon handles enquiry information and uses Cloudflare Web Analytics on its website.">

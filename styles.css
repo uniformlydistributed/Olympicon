@@ -16,6 +16,7 @@ src:url("fonts/source-sans-3-latin.woff2") format("woff2");
 }
 
 :root{
+color-scheme:light;
 --navy:#102946;
 --navy-dark:#08192d;
 --gold:#d4b16a;

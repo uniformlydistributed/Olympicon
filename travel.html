@@ -4,12 +4,20 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script>
+let savedTheme;
 try {
-  if (localStorage.getItem("olympicon-theme") === "dark") {
-    document.documentElement.dataset.theme = "dark";
-  }
+  savedTheme = localStorage.getItem("olympicon-theme");
 } catch (error) {
   console.error("Unable to load the saved theme preference.", error);
+}
+const initialTheme = savedTheme === "dark" || savedTheme === "light"
+  ? savedTheme
+  : typeof window.matchMedia === "function" &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+if (initialTheme === "dark") {
+  document.documentElement.dataset.theme = "dark";
 }
 </script>
 <meta name="description" content="Plan your journey to Olympicon at Liverpool Olympia by train, bus or taxi. Find nearby stations, bus routes and local taxi numbers.">

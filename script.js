@@ -12,13 +12,19 @@ if (themeToggle) {
     themeToggle.querySelector("span").textContent = isDark ? "☀" : "☾";
   };
 
-  let savedTheme = "light";
+  let savedTheme;
   try {
-    savedTheme = localStorage.getItem("olympicon-theme") === "dark" ? "dark" : "light";
+    savedTheme = localStorage.getItem("olympicon-theme");
   } catch (error) {
     console.error("Unable to load the saved theme preference.", error);
   }
-  setTheme(savedTheme === "dark");
+  const initialTheme = savedTheme === "dark" || savedTheme === "light"
+    ? savedTheme
+    : typeof window.matchMedia === "function" &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light";
+  setTheme(initialTheme === "dark");
 
   themeToggle.addEventListener("click", () => {
     const isDark = document.documentElement.dataset.theme !== "dark";
