@@ -1,4 +1,4 @@
-/* Global design tokens and baseline styles. */
+/* Global design tokens and baseline styles; adjust tokens here to update the shared site palette. */
 :root{
 --navy:#102946;
 --navy-dark:#08192d;
@@ -225,6 +225,7 @@ margin:auto;
 padding:90px 0;
 }
 
+/* Shared contact-card layout used by both the contact and exhibitor enquiry pages. */
 .contact-section{
 width:min(900px,90%);
 margin:auto;
@@ -247,6 +248,7 @@ margin-bottom:20px;
 margin-top:16px;
 }
 
+/* Shared form layout and controls; keep labels and visible keyboard focus for accessibility. */
 .contact-form{
 display:grid;
 gap:20px;
@@ -448,7 +450,7 @@ font-size:.875rem;
 margin:24px 0 0;
 }
 
-/* Tablet and smaller desktop layouts. */
+/* Tablet and smaller desktop layouts; the same breakpoint switches the header to its menu button. */
 @media(max-width:1100px){
 
 .hero{

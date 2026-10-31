@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- List canonical, publicly indexable pages here; add new standalone pages when they are published. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://olympicon.org/site.html</loc>
   </url>
   <url>
     <loc>https://olympicon.org/contact.html</loc>
+  </url>
+  <url>
+    <loc>https://olympicon.org/vendors.html</loc>
   </url>
 </urlset>

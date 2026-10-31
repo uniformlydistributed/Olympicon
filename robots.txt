@@ -1,3 +1,4 @@
+# Public pages are open to crawlers; the sitemap lists their canonical URLs.
 User-agent: *
 Allow: /
 
