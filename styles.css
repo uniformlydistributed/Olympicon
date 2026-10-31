@@ -598,6 +598,16 @@ font-size:.875rem;
 margin:24px 0 0;
 }
 
+.footer-cookie-notice a{
+color:var(--gold-light);
+text-underline-offset:3px;
+}
+
+.footer-cookie-notice a:hover,
+.footer-cookie-notice a:focus-visible{
+color:white;
+}
+
 /* Tablet and smaller desktop layouts; the same breakpoint switches the header to its menu button. */
 @media(max-width:1100px){
 
