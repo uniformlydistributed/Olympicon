@@ -110,8 +110,9 @@ if (initialTheme === "dark") {
 <h1>Contact Us</h1>
 <p>Have a question about Olympicon? We’d love to hear from you.</p>
 
-<!-- FormSubmit forwards contact enquiries to the team inbox; update the action if the recipient changes. -->
-<form class="contact-form" action="https://formsubmit.co/hello@olympicon.org" method="POST">
+<!-- Web3Forms forwards contact enquiries to the team inbox. -->
+<form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+<input type="hidden" name="access_key" value="aca11882-fb15-490d-82c3-1f196a99f88e">
 <div class="contact-field">
 <label for="contact-name">Name</label>
 <input id="contact-name" type="text" name="name" autocomplete="name" required>

@@ -130,10 +130,11 @@ if (initialTheme === "dark") {
 <p>As a new convention, stalls are free for our inaugural event. We are expecting between 100 and 150 guests.</p>
 <p>Tell us a little about your stall and what you would need. This form is an enquiry, not a confirmed booking. Our team will follow up with information about availability, stall options and arrangements.</p>
 
-<!-- FormSubmit sends an enquiry to the exhibitor inbox; submitting is not a confirmed stall booking. -->
-<form class="contact-form" action="https://formsubmit.co/exhibit@olympicon.org" method="POST">
+<!-- Web3Forms sends an enquiry to the exhibitor inbox; submitting is not a confirmed stall booking. -->
+<form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+<input type="hidden" name="access_key" value="aca11882-fb15-490d-82c3-1f196a99f88e">
 <!-- This subject appears on the email received by the exhibitor team. -->
-<input type="hidden" name="_subject" value="Olympicon 2027 exhibitor enquiry">
+<input type="hidden" name="subject" value="Olympicon 2027 exhibitor enquiry">
 
 <div class="contact-field">
 <label for="vendor-business">Business or stall name</label>
