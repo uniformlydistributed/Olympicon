@@ -41,6 +41,7 @@ color-scheme:dark;
 --input-surface:#243449;
 }
 
+/* Shared reset and motion defaults; reduced-motion overrides are kept with the transitions. */
 *{
 box-sizing:border-box;
 margin:0;
@@ -277,6 +278,7 @@ max-width:760px;
 min-width:0;
 }
 
+/* Shared heading accents, calls to action, and hero copy. */
 .eyebrow{
 color:var(--gold-light);
 letter-spacing:.2em;
@@ -512,6 +514,7 @@ color:var(--gold);
 margin-bottom:10px;
 }
 
+/* Ticket callout and the event/venue information grid. */
 .tickets-section{
 background:var(--navy);
 color:white;
@@ -528,6 +531,7 @@ margin:0 0 30px;
 padding-left:24px;
 }
 
+/* Event date, calendar links, venue details, and travel cards share this grid. */
 .visit-grid{
 display:grid;
 grid-template-columns:repeat(2,minmax(0,1fr));
@@ -719,6 +723,7 @@ cursor:pointer;
 font-weight:700;
 }
 
+/* Shared footer, social links, and utility navigation. */
 .site-footer{
 background:var(--navy-dark);
 color:white;

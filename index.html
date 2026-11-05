@@ -97,9 +97,11 @@
 }
 </script>
 
+<!-- Keep both automatic redirects and the fallback link pointed at the canonical event page. -->
 <meta http-equiv="refresh" content="0;url=site.html">
 </head>
 <body>
+<!-- Script redirect supplements the meta refresh; the link below remains the no-script fallback. -->
 <script>
 window.location.replace("site.html");
 </script>

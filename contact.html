@@ -4,6 +4,7 @@
 <!-- Contact-page search and social-preview metadata; keep canonical URL and shared preview image accurate. -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Set the theme before first paint; keep this bootstrap in sync with script.js. -->
 <script>
 let savedTheme;
 let savedThemeAt;
@@ -110,7 +111,7 @@ if (initialTheme === "dark") {
 <h1>Contact Us</h1>
 <p>Have a question about Olympicon? We’d love to hear from you.</p>
 
-<!-- Web3Forms forwards contact enquiries to the team inbox. -->
+<!-- This Web3Forms key is shared with vendors.html; keep both forms aligned with the dashboard inbox. -->
 <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
 <input type="hidden" name="access_key" value="aca11882-fb15-490d-82c3-1f196a99f88e">
 <div class="contact-field">
@@ -165,6 +166,7 @@ Follow us on Instagram
 <!-- Cloudflare Web Analytics -->
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "63cba8cb50c44fc893ce80165b6e42b3"}'></script>
 <!-- End Cloudflare Web Analytics -->
+<!-- Shared navigation, theme, and opt-in map interactions. -->
 <script src="script.js"></script>
 </body>
 </html>

@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Set the theme before first paint; keep this bootstrap in sync with script.js. -->
 <script>
 let savedTheme;
 let savedThemeAt;
@@ -87,6 +88,7 @@ if (initialTheme === "dark") {
 <body>
 <div class="greek-border" aria-hidden="true"></div>
 
+<!-- Shared site navigation; keep its destinations consistent with other public pages. -->
 <header class="site-header">
 <a class="brand" href="site.html">
   <img class="brand-logo" src="./images/Olympicon_Logo.png" alt="Olympicon logo">
@@ -116,6 +118,7 @@ if (initialTheme === "dark") {
 <p class="eyebrow dark">PLAN YOUR JOURNEY</p>
 <h1>Getting to Liverpool Olympia</h1>
 
+<!-- The map URL is stored as data so script.js can load it only after visitor consent. -->
 <div class="venue-map travel-page-map" data-map-src="https://maps.google.com/maps?q=Liverpool%20Olympia%2C%20West%20Derby%20Road%2C%20Liverpool%20L6%209BY&amp;output=embed">
 <div class="map-load-overlay">
   <button class="map-load-button" type="button" aria-label="Load map showing Liverpool Olympia">Load map</button>
@@ -188,6 +191,7 @@ Follow us on Instagram
 <!-- Cloudflare Web Analytics -->
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "63cba8cb50c44fc893ce80165b6e42b3"}'></script>
 <!-- End Cloudflare Web Analytics -->
+<!-- Shared navigation, theme, and opt-in map interactions. -->
 <script src="script.js"></script>
 </body>
 </html>

@@ -20,6 +20,7 @@ if (themeToggle) {
   } catch (error) {
     console.error("Unable to load the saved theme preference.", error);
   }
+  // On a later page load, ignore saved choices older than an hour and use the system preference instead.
   const currentTime = Date.now();
   const hasRecentSavedTheme =
     (savedTheme === "dark" || savedTheme === "light") &&
@@ -38,6 +39,7 @@ if (themeToggle) {
     const isDark = document.documentElement.dataset.theme !== "dark";
     const applyTheme = () => setTheme(isDark);
 
+    // Use the animated transition when supported, but respect reduced-motion preferences.
     if (
       typeof document.startViewTransition === "function" &&
       !window.matchMedia("(prefers-reduced-motion: reduce)").matches
@@ -109,6 +111,7 @@ if (mapContainer) {
   const mapSrc = mapContainer.dataset.mapSrc;
 
   if (mapButton && mapFrame && mapSrc) {
+    // Assigning the iframe URL here defers the third-party request until an explicit click.
     mapButton.addEventListener("click", () => {
       mapFrame.src = mapSrc;
       mapContainer.classList.add("is-loaded");
