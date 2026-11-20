@@ -263,7 +263,7 @@ aspect-ratio:744 / 458;
 justify-self:center;
 }
 
-@media(min-width:1101px){
+@media(orientation:landscape){
 .hero-emblem{
 background:url("images/olympicon-crest.png") center / contain no-repeat;
 filter:drop-shadow(0 12px 24px rgba(0,0,0,.3));
@@ -822,8 +822,8 @@ color:white;
 color:white;
 }
 
-/* Tablet and smaller desktop layouts; the same breakpoint switches the header to its menu button. */
-@media(max-width:1100px){
+/* Portrait viewports use the stacked layout and collapsible navigation. */
+@media(orientation:portrait){
 
 .hero{
 grid-template-columns:minmax(0,1fr);
@@ -862,8 +862,44 @@ padding:20px;
 display:flex;
 }
 
+.theme-toggle{
+align-self:center;
+}
+
 h1{
 font-size:3.3rem;
+}
+}
+
+/* Keep desktop navigation compact on landscape tablet and phone viewports. */
+@media(orientation:landscape) and (max-width:1100px){
+.site-header{
+padding-right:2%;
+padding-left:2%;
+}
+
+.brand{
+gap:6px;
+font-size:1rem;
+}
+
+.brand-logo{
+width:40px;
+height:40px;
+}
+
+.main-nav{
+gap:clamp(4px,.7vw,8px);
+font-size:.8rem;
+}
+
+.nav-ticket{
+padding-right:8px;
+padding-left:8px;
+}
+
+h1{
+font-size:clamp(3.3rem,5vw,4.5rem);
 }
 }
 
@@ -883,7 +919,7 @@ justify-content:center;
 }
 
 /* Stack venue details on narrow mobile screens. */
-@media(max-width:600px){
+@media(orientation:portrait) and (max-width:600px){
 .venue-item{
 align-items:flex-start;
 flex-direction:column;
