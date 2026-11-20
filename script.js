@@ -1,8 +1,9 @@
-// The responsive menu is optional, so initialize it only when both controls exist.
+// Shared interactions for theme preferences, responsive navigation, and consent-triggered maps.
 const menuToggle = document.querySelector(".menu-toggle");
 const mainNav = document.querySelector("#main-nav");
 const themeToggle = document.querySelector(".theme-toggle");
 
+// Theme controls are optional so the preference logic also works on pages without a toggle.
 if (themeToggle) {
   const setTheme = (isDark) => {
     document.documentElement.dataset.theme = isDark ? "dark" : "light";
@@ -58,6 +59,7 @@ if (themeToggle) {
   });
 }
 
+// Bind navigation behavior only when the page provides both parts of the menu control.
 if (menuToggle && mainNav) {
 
   // Keep the visual menu state and button accessibility state in sync.
@@ -103,6 +105,7 @@ if (menuToggle && mainNav) {
 
 }
 
+// Only pages with a venue map need the consent-gated iframe behavior.
 const mapContainer = document.querySelector(".venue-map");
 
 if (mapContainer) {

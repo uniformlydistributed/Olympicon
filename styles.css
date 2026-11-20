@@ -1,4 +1,5 @@
-/* Global design tokens and baseline styles; adjust tokens here to update the shared site palette. */
+/* Global design tokens and baseline styles; keep theme overrides aligned with each page's early theme bootstrap. */
+/* Self-hosted variable fonts; keep file paths and weight ranges aligned with assets in fonts/. */
 @font-face{
 font-family:"Cinzel";
 font-style:normal;
@@ -263,6 +264,7 @@ aspect-ratio:744 / 458;
 justify-self:center;
 }
 
+/* Show the emblem in the two-column hero only in landscape; portrait hides it with the stacked layout below. */
 @media(orientation:landscape){
 .hero-emblem{
 background:url("images/olympicon-crest.png") center / contain no-repeat;
